@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', 'Opkela', 'Source Sans 3', 'Playfair Display', Arial, sans-serif;
+}
+/* 3D Coin Effect for Navbar Logos */
+.coin-3d {
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Removed all custom .important-links CSS rules. Use only Tailwind classes in JSX. */
+.coin-border {
+  border-color: #FFD700;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.coin-inner {
+  width: 96px;
+  height: 96px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: coin-spin 4s linear infinite;
+}
+.group:hover .coin-inner {
+  animation-play-state: paused !important;
+}
+.coin-face {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.coin-front {
+  transform: rotateY(0deg);
+}
+.coin-back {
+  transform: rotateY(180deg);
+}
+@keyframes coin-spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+/* Slow spin for logos */
+.animate-spin-slow {
+  animation: spin 6s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spin-reverse 6s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spin-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&family=Opkela:wght@400;700&display=swap');
+@keyframes scrollUpImportantLinks {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-scroll-up-important-links {
+  animation: scrollUpImportantLinks 5s linear infinite;
+}
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 60% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 10%;
+
+    --primary: 220 65% 18%;
+    --primary-foreground: 45 90% 55%;
+
+    --secondary: 45 85% 50%;
+    --secondary-foreground: 220 65% 12%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 45 85% 50%;
+    --accent-foreground: 220 65% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 65% 18%;
+
+    --radius: 0.5rem;
+
+    --navy-deep: 220 65% 10%;
+    --navy-medium: 220 55% 20%;
+    --navy-light: 220 40% 35%;
+    --gold: 45 85% 50%;
+    --gold-light: 45 70% 65%;
+    --gold-dark: 45 90% 38%;
+    --slate-light: 220 15% 95%;
+
+    --sidebar-background: 220 65% 10%;
+    --sidebar-foreground: 45 70% 65%;
+    --sidebar-primary: 45 85% 50%;
+    --sidebar-primary-foreground: 220 65% 10%;
+    --sidebar-accent: 220 55% 20%;
+    --sidebar-accent-foreground: 45 70% 65%;
+    --sidebar-border: 220 40% 25%;
+    --sidebar-ring: 45 85% 50%;
+
+    --font-heading: 'Opkela', serif;
+    --font-body: 'Opkela', serif;
+  }
+
+  .dark {
+    --background: 220 65% 6%;
+    --foreground: 220 15% 92%;
+    --card: 220 55% 10%;
+    --card-foreground: 220 15% 92%;
+    --popover: 220 55% 10%;
+    --popover-foreground: 220 15% 92%;
+    --primary: 45 85% 50%;
+    --primary-foreground: 220 65% 10%;
+    --secondary: 220 55% 20%;
+    --secondary-foreground: 220 15% 92%;
+    --muted: 220 40% 15%;
+    --muted-foreground: 220 15% 60%;
+    --accent: 45 85% 50%;
+    --accent-foreground: 220 65% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 45 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, hsl(45 85% 50%), hsl(45 70% 65%));
+  }
+  .bg-navy-gradient {
+    background: linear-gradient(135deg, hsl(220 65% 10%), hsl(220 55% 20%));
+  }
+  .bg-navy-hero {
+    background: linear-gradient(180deg, hsl(220 65% 8%) 0%, hsl(220 55% 15%) 100%);
+  }
+  .border-gold {
+    border-color: hsl(45 85% 50%);
+  }
+  .shadow-gold {
+    box-shadow: 0 4px 20px -4px hsl(45 85% 50% / 0.3);
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  .animate-ticker {
+    animation: ticker 35s linear infinite;
+  }
+  .animate-ticker:hover {
+    animation-play-state: paused;
+  }
+  .animate-scroll-up {
+    animation: scrollUp 18s linear infinite;
+  }
+  .animate-scroll-up:hover {
+    animation-play-state: paused;
+  }
+  .animate-scroll-up-important-links-fast {
+    animation: scrollUpImportantLinks 8s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
