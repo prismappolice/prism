@@ -46,8 +46,8 @@ const OrgStructure = () => (
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Top hierarchy */}
         <div className="flex justify-center mb-12">
-          <div className="flex items-center justify-center rounded-lg border px-8 py-4 w-[550px] max-w-full bg-white">
-            <img src={digSir} alt="DIG Sir" className="w-36 h-36 rounded-full object-fill border-4 border-gold/60 shadow-lg mr-6" />
+          <div className="flex flex-col md:flex-row items-center justify-center rounded-lg border px-8 py-4 w-[550px] max-w-full bg-white">
+            <img src={digSir} alt="DIG Sir" className="w-36 h-36 rounded-full object-fill border-4 border-gold/60 shadow-lg mb-6 md:mb-0 md:mr-6" />
             <div className="text-center">
               <div className="font-heading font-bold text-2xl text-gold mb-2">{orgData.head.title}</div>
               <div className="text-lg font-heading font-bold text-black mb-1">{orgData.head.name}</div>

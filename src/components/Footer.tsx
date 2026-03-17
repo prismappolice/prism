@@ -15,7 +15,7 @@ const Footer = () => (
             <span className="text-lg font-heading font-bold text-gradient-gold">PRISM</span>
           </div>
           <p className="text-sm text-gold-light/90 font-body leading-relaxed">
-            Police Research Institute for System Modernization — A Centre of Excellence under the Andhra Pradesh Police Department.
+            Police Research Institute for Systems Modernization — A Centre of Excellence under the Andhra Pradesh Police Department.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ const Footer = () => (
 
       <div className="border-t border-gold/10 mt-8 pt-6 text-center">
         <p className="text-xl text-gold-light/90 font-body">
-          © {new Date().getFullYear()} PRISM — Police Research Institute for System Modernization, AP Police Department. All Rights Reserved.
+          © {new Date().getFullYear()} PRISM — Police Research Institute for Systems Modernization, AP Police Department. All Rights Reserved.
         </p>
       </div>
     </div>

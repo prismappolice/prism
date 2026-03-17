@@ -47,9 +47,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="block">
               <p className="text-[32px] font-opkela font-bold text-gradient-gold leading-tight">PRISM</p>
-              <p className="text-[18px] font-opkela text-gradient-gold font-bold leading-tight -mt-1">Police Research Institute for System Modernization</p>
+              <p className="text-[18px] font-opkela text-gradient-gold font-bold leading-tight -mt-1">Police Research Institute for Systems Modernization</p>
               <p className="text-[18px] font-opkela text-gradient-gold font-bold leading-tight -mt-1">Andhra Pradesh Police Department</p>
             </div>
           </Link>

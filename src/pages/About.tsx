@@ -34,7 +34,7 @@ const About = () => (
         {/* Left: Paragraph */}
         <div className="flex-1 text-justify text-black px-4 py-2" style={{ color: '#222' }}>
           <p className="text-base md:text-lg font-body text-black mb-5" style={{ color: '#222' }}>
-            Police Research Institute for System Modernization (PRISM) is a pioneering initiative by the Andhra Pradesh Police, dedicated to advancing law enforcement through cutting-edge research, technology integration, and capacity building. PRISM empowers the police force with modern digital tools, real-time data systems, and state-of-the-art infrastructure, fostering innovation and excellence in public safety, crime prevention, and operational effectiveness.
+            Police Research Institute for Systems Modernization (PRISM) is a pioneering initiative by the Andhra Pradesh Police, dedicated to advancing law enforcement through cutting-edge research, technology integration, and capacity building. PRISM empowers the police force with modern digital tools, real-time data systems, and state-of-the-art infrastructure, fostering innovation and excellence in public safety, crime prevention, and operational effectiveness.
           </p>
         </div>
         {/* Right: DGP Sir photo and info */}
